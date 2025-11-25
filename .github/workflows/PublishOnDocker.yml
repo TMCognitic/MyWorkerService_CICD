@@ -19,6 +19,8 @@ jobs:
               run: dotnet restore
             - name: Build
               run: dotnet build "./WorkerService/WorkerService.csproj" --no-restore -c Release -o ./build
+            - name: view result
+              run: ls -l -a ./build
             - name: Tests
               run: echo "Tests"
             
