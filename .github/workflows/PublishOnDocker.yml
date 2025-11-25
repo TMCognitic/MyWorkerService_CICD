@@ -18,7 +18,7 @@ jobs:
             - name: Restaurer les packages
               run: dotnet restore
             - name: Build
-              run: echo "Build"  
+              run: dotnet build --no-restore  
             - name: Tests
               run: echo "Tests"
             
