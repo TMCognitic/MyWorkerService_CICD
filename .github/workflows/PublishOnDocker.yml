@@ -1,19 +1,22 @@
 name: Publish on Docker
 
 on:
-    #push: ['main']
+    # push: 
+    #     branches: [ 'main' ]
     workflow_dispatch:
 
 jobs:
     BuildAndTest:
         runs-on: ubuntu-latest
         steps:
-            - name: View Content
-              run: ls -l -a
             - name: GetRepository
               uses: actions/checkout@v6
-            - name: View Content
-              run: ls -l -a
+            - name: Setup .NET
+              uses: actions/setup-dotnet@v5
+              with:
+                dotnet-version: '10.0.x'
+            - name: Restaurer les packages
+              run: dotnet restore
             - name: Build
               run: echo "Build"  
             - name: Tests
