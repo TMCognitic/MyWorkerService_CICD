@@ -1,0 +1,18 @@
+name: Publish on Docker
+
+on:
+    #push: ['main']
+    workflow_dispatch:
+
+jobs:
+    BuildAndTest:
+        runs-on: ubuntu-latest
+        steps:
+            - name: GetRepository
+              run: echo "GetRepository"
+            - name: Build
+              run: echo "Build"  
+            - name: Tests
+              run: echo "Tests"
+            
+
