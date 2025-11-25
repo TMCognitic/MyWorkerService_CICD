@@ -8,6 +8,8 @@ jobs:
     BuildAndTest:
         runs-on: ubuntu-latest
         steps:
+            - name: View Content
+              run: ls -l -a
             - name: GetRepository
               run: echo "GetRepository"
             - name: Build
