@@ -11,7 +11,7 @@ namespace WorkerService
                 if (logger.IsEnabled(LogLevel.Information))
                 {
                     Guid id = Generator.CreateGuid();
-                    logger.LogInformation($"{id.ToString().ToUpper()} : Worker running at: {DateTimeOffset.Now:T}");
+                    logger.LogInformation($"{id.ToString().ToUpper()} : Service s'exécute à : {DateTimeOffset.Now:T}");
                 }
                 await Task.Delay(1000, stoppingToken);
             }
