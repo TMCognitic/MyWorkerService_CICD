@@ -11,7 +11,9 @@ jobs:
             - name: View Content
               run: ls -l -a
             - name: GetRepository
-              run: echo "GetRepository"
+              uses: actions/checkout@v6
+            - name: View Content
+              run: ls -l -a
             - name: Build
               run: echo "Build"  
             - name: Tests
